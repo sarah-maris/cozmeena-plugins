@@ -40,10 +40,10 @@ class CozFeatByID extends WP_Widget {
 		$featImage = get_the_post_thumbnail($featID, 'thumbnail');
 
 		// Display the Featured Post title 
-		if ( $title )
-			echo $before_title . $featTitle . $after_title;
+		if ( $featTitle )
+			echo $before_title .'<div id=feat-title>' . $featTitle .'</div>'. $after_title;
 
-		//Display the name 
+		//Display the featured image 
 		if ( $featImage )
 			echo( '<div id=feat-image>' . $featImage. '</div>' );
 
