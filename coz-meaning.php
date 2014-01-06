@@ -39,9 +39,22 @@ class CozMeaning extends WP_Widget {
 		// Add HTML to start widget area (defined in functions.php)
 		echo $before_widget; //defined in functions.php
 
-		// SET COLOR STUFF GOES HERE!!!!
+		// SET DIV BASED ON COLOR STUFF GOES HERE!!!!
 		
+		if ($color == 'pink')		
+			echo '<div id="pink-def">';
 		
+		if ($color == 'green')		
+			echo '<div id="green-def">';
+		
+		if ($color == 'orange')		
+			echo '<div id="orange-def">';
+		
+		if ($color == 'blue')		
+			echo '<div id="blue-def">';
+		
+		// SET UP INNNER DIV
+		echo '<div id="inner-def">';
 		
 		
 		
@@ -63,7 +76,7 @@ class CozMeaning extends WP_Widget {
 		$featTitle = get_post_field( 'post_title', $featID); 
 		$featTag = simple_fields_value( 'tag_line', $featID);
 		$featContent = get_post_field( 'post_content', $featID); 
-		$featImage = get_the_post_thumbnail($featID, 'thumbnail');
+		//$featImage = get_the_post_thumbnail($featID, 'thumbnail');
 
 		// Display the definition title 
 		if ( $featTitle )
@@ -73,16 +86,14 @@ class CozMeaning extends WP_Widget {
 		if ( $featTag )
 			echo $before_title .'<div id=def-tag>' . $featTag .'</div>'. $after_title;	
 
-		//Display the featured image 
-		if ( $featImage )
-			echo( '<div id=def-image>' . $featImage. '</div>' );
-
 		//Display the post content
 		if ( $featContent )
 			echo( '<div id=def-cont>' . $featContent. '</div>' );
 		
 		
 		// Add HTML to end widget area (defined in functions.php)
+		echo '</div>';
+		echo '</div>';
 		echo $after_widget;
 	}
 
