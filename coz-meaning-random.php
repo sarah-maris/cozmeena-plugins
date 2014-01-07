@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Random Defintions of Cozmeena
  * Description: A widget that displays a random attribute of Cozmeena in a colorful sidebar
- * Version: 1.0
+ * Version: 1.0  (01-07-14)
  * Author: Sarah Maris 
  */
 
