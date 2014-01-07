@@ -56,8 +56,7 @@ class CozRand extends WP_Widget {
 		$featContent = get_post_field( 'post_content', $featID); 
 		$dropNum = simple_fields_value( 'def_color', $featID, true);
 		
-		echo $color;
-		
+	
 		// SET DIV BASED ON COLOR STUFF GOES HERE!!!!
 		
 		if ($dropNum == 'dropdown_num_2')		
@@ -79,11 +78,11 @@ class CozRand extends WP_Widget {
 		
 		// Display the definition title 
 		if ( $featTitle )
-			echo $before_title .'<div id=def-title>' . $featTitle .'</div>'. $after_title;
+			echo '<div id=def-title>' . $featTitle .'</div>';
 
 		// Display the tag line 		
 		if ( $featTag )
-			echo $before_title .'<div id=def-tag>' . $featTag .'</div>'. $after_title;	
+			echo '<div id=def-tag>' . $featTag .'</div>';	
 
 		//Display the post content
 		if ( $featContent )
